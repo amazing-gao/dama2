@@ -157,5 +157,7 @@ dama2.simpleDecodeFile(44, 'http://baidu.com/img1.jpg', function(error, id, ret)
 
 ### TODO
 1.batch decode
+
 2.wait decode finish then callback
+
 3.emit event when decode finish

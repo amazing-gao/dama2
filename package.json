@@ -1,6 +1,6 @@
 {
   "name": "dama2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "打码兔，验证码自动输入，打码",
   "main": "index.js",
   "scripts": {

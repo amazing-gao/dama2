@@ -66,6 +66,15 @@ describe '打码兔，请先设置你的用户信息', ()->
       assert result == 'AEYAYY'
       done()
 
+  it '简单打码URL', (done)->
+    @timeout 10000
+    dama2.simpleDecode 44, 'http://reg.163.com/services/getimg?v=1430186526236&num=6&type=2&id=c9deebf3c01db3f2fb0de2d0edf263b9adf46920', '', (error, id, result)->
+      console.log error if error
+      assert error is null
+      assert id
+      assert result
+      done()
+
   it '打码URL', (done)->
     @timeout 10000
     dama2.decode 44, 'http://www.dama2.com/Index/imgVerify',
@@ -73,15 +82,6 @@ describe '打码兔，请先设置你的用户信息', ()->
         console.log error if error
         requestID = result.id
         assert error is null
-        assert result
-        done()
-
-  it '简单打码URL', (done)->
-    @timeout 10000
-    dama2.simpleDecode 44, 'http://reg.163.com/services/getimg?v=1430186526236&num=6&type=2&id=c9deebf3c01db3f2fb0de2d0edf263b9adf46920', '', (error, id, result)->
-        console.log error if error
-        assert error is null
-        assert id
         assert result
         done()
 
